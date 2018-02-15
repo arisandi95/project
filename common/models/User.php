@@ -26,6 +26,21 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
+    public $id;
+    public $username;
+    public $password;
+    public $authKey;
+    public $accessToken;
+
+    private static $users = [
+        '100' => [
+            'id' => '100',
+            'username' => 'admin',
+            'authKey' => 'test100key',
+            'accessToken' => '10--token',
+        ],
+    ];
+
 
     /**
      * @inheritdoc
